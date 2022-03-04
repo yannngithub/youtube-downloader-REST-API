@@ -49,7 +49,7 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                                     y2mate: getLinkTy2mate,
                                 }
                             }
-                            res.json({status: 200, creator: "@cakrayp_jhn", result: getLinkDownloader})
+                            res.json({status: 200, creator: "@alvianto.17", result: getLinkDownloader})
                         } else {
                             const { publishedAt, channelId, title, description, thumbnails, channelTitle, liveBroadcastContent } = data.items[0].snippet;
                             const { viewCount, likeCount, dislikeCount, favoriteCount, commentCount } = data.items[0].statistics
@@ -73,7 +73,7 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                             }
                             res.json({
                                 status: 200,
-                                creator: "@cakrayp_jhn",
+                                creator: "@alvianto.17",
                                 result: {
                                     video: {
                                         id: data.items[0].id,
@@ -98,14 +98,14 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                     }).catch(err => {
                         res.json({
                             status: 406,
-                            creator: "@cakrayp_jhn",
+                            creator: "@alvianto.17",
                             message: 'Please enter Youtube URL valid.'
                         })
                     })
             } else {
                 res.json({
                     status: 403,
-                    creator: "@cakrayp_jhn",
+                    creator: "@alvianto.17",
                     message: "This is special for youtube URL"
                 })
             }
@@ -130,7 +130,7 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                                     y2mate: getLinkTy2mate,
                                 }
                             }
-                            res.json({status: 200, creator: "@cakrayp_jhn", result: getLinkDownloader})
+                            res.json({status: 200, creator: "@alvianto.17", result: getLinkDownloader})
                         } else {
                             const { publishedAt, channelId, title, description, thumbnails, channelTitle, liveBroadcastContent } = data.items[0].snippet;
                             const { viewCount, likeCount, dislikeCount, favoriteCount, commentCount } = data.items[0].statistics
@@ -154,7 +154,7 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                             }
                             res.json({
                                 status: 200,
-                                creator: "@cakrayp_jhn",
+                                creator: "@alvianto.17",
                                 result: {
                                     video: {
                                         id: data.items[0].id,
@@ -186,7 +186,7 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
             } else {
                 res.json({
                     status: 403,
-                    creator: "@cakrayp_jhn",
+                    creator: "@alvianto.17",
                     message: "This is special for youtube URL"
                 })
             }
