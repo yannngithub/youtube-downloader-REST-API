@@ -16,7 +16,7 @@ app.set("json spaces", 4)
 
 app.get('/', async (req, res) => {
     const link_gitub = "https://github.com/cakrayp/youtube-downloader-REST-API.git"
-    res.send(`<code>Hello Welcome to My youtube Rest API, Please read in Documentation. <a href="${link_gitub}">"${link_gitub}"</a></code0`)
+    res.send(`<code>https://yannn-ytdownloader.vercel.app/youtube/downloader/TYPE(audio/video)?url=LINK</code0`)
 })
 
 app.get('/youtube/downloader/:Mimetype', async (req, res) => {
