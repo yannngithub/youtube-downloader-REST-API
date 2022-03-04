@@ -4,7 +4,7 @@ const fetch = require('node-fetch')
 const axios = require('axios');
 const app = express()
 const port = process.env.PORT || 4040
-const google_key = process.env.GOOGLE_KEY || "YOUR_GOOGLE_APIKEY"
+const google_key = process.env.GOOGLE_KEY || "AIzaSyBAtDdUTQK2EvtC4f6mFWU778zd_WmyxbA"
 
 // Library
 const {
