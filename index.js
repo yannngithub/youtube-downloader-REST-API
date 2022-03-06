@@ -41,7 +41,6 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                             } else {
                                 try { var getLinkTubemp3 = await tubemp3.getVideoWithTubeMp3(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTubemp3 = err.message }
                                 getLinkDownloader = {
-                                    getLinkTubemp3,
                                 }
                             }
                             res.json({status: 200, creator: "@alvianto.17", result: getLinkDownloader})
@@ -61,7 +60,6 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                             } else {
                                 try { var getLinkTubemp3 = await tubemp3.getVideoWithTubeMp3(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTubemp3 = err.message }
                                 getLinkDownloader = {
-                                    getLinkTubemp3,
                                 }
                             }
                             res.json({
@@ -138,7 +136,6 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                             } else {
                                 try { var getLinkTubemp3 = await tubemp3.getAudioWithTubeMp3(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTubemp3 = err.message }
                                 getLinkDownloader = {
-                                    getLinkTubemp3,
                                 }
                             }
                             res.json({
