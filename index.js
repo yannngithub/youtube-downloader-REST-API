@@ -43,10 +43,8 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                                 }
                             } else {
                                 try { var getLinkTubemp3 = await tubemp3.getVideoWithTubeMp3(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTubemp3 = err.message }
-                                try { var getLinkTy2mate = await y2mate.getVideoWithy2mate(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTy2mate = err.message }
                                 getLinkDownloader = {
                                     tubemp3_biz: getLinkTubemp3,
-                                    y2mate: getLinkTy2mate,
                                 }
                             }
                             res.json({status: 200, creator: "@alvianto.17", result: getLinkDownloader})
@@ -65,10 +63,8 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                                 }
                             } else {
                                 try { var getLinkTubemp3 = await tubemp3.getVideoWithTubeMp3(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTubemp3 = err.message }
-                                try { var getLinkTy2mate = await y2mate.getVideoWithy2mate(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTy2mate = err.message }
                                 getLinkDownloader = {
                                     tubemp3_biz: getLinkTubemp3,
-                                    y2mate: getLinkTy2mate,
                                 }
                             }
                             res.json({
@@ -124,10 +120,8 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                                 }
                             } else {
                                 try { var getLinkTubemp3 = await tubemp3.getAudioWithTubeMp3(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTubemp3 = err.message }
-                                try { var getLinkTy2mate = await y2mate.getAudioWithy2mate(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTy2mate = err.message }
                                 getLinkDownloader = {
                                     tubemp3_biz: getLinkTubemp3,
-                                    y2mate: getLinkTy2mate,
                                 }
                             }
                             res.json({status: 200, creator: "@alvianto.17", result: getLinkDownloader})
@@ -146,10 +140,8 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                                 }
                             } else {
                                 try { var getLinkTubemp3 = await tubemp3.getAudioWithTubeMp3(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTubemp3 = err.message }
-                                try { var getLinkTy2mate = await y2mate.getAudioWithy2mate(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTy2mate = err.message }
                                 getLinkDownloader = {
                                     tubemp3_biz: getLinkTubemp3,
-                                    y2mate: getLinkTy2mate,
                                 }
                             }
                             res.json({
