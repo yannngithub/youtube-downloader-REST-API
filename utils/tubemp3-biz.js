@@ -48,7 +48,7 @@ function getVideoWithTubeMp3(link) {
         }
         axios({
             method: "GET",
-            url: `https://tubemp3.biz/api/mp3/${VideoID[1]}`,
+            url: `https://tubemp3.biz/api/mp4/${VideoID[1]}`,
             headers: {
                 "Content-type": "text/html"
             }
