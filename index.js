@@ -6,6 +6,7 @@ const app = express()
 const port = process.env.PORT || 4040
 const google_key = process.env.GOOGLE_KEY || "AIzaSyBAtDdUTQK2EvtC4f6mFWU778zd_WmyxbA"
 
+
 // Library
 const {tubemp3} = require('./utils/index')
 
@@ -13,7 +14,7 @@ app.set("json spaces", 4)
 
 app.get('/', async (req, res) => {
     const link_gitub = "https://github.com/cakrayp/youtube-downloader-REST-API.git"
-    res.send(`<code>https://yannn-ytdownloader.vercel.app/youtube/downloader/TYPE(audio/video)?url=LINK</code0`)
+    res.send(`<code>https://yannnapi.herokuapp.com/youtube/downloader/audio?url=&emsp;https://yannnapi.herokuapp.com/youtube/downloader/video?url=</code0`)
 })
 
 app.get('/youtube/downloader/:Mimetype', async (req, res) => {
@@ -41,9 +42,10 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                             } else {
                                 try { var getLinkTubemp3 = await tubemp3.getVideoWithTubeMp3(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTubemp3 = err.message }
                                 getLinkDownloader = {
+                                    tubemp3_biz: getLinkTubemp3,
                                 }
                             }
-                            res.json({status: 200, creator: "@alvianto.17", result: getLinkDownloader})
+                            res.json({status: 200, creator: "@alvianto", result: getLinkDownloader})
                         } else {
                             const { publishedAt, channelId, title, description, thumbnails, channelTitle, liveBroadcastContent } = data.items[0].snippet;
                             const { viewCount, likeCount, dislikeCount, favoriteCount, commentCount } = data.items[0].statistics
@@ -60,6 +62,7 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                             } else {
                                 try { var getLinkTubemp3 = await tubemp3.getVideoWithTubeMp3(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTubemp3 = err.message }
                                 getLinkDownloader = {
+                                    tubemp3_biz: getLinkTubemp3,
                                 }
                             }
                             res.json({
@@ -116,10 +119,10 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                             } else {
                                 try { var getLinkTubemp3 = await tubemp3.getAudioWithTubeMp3(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTubemp3 = err.message }
                                 getLinkDownloader = {
-                                    getLinkTubemp3,
+                                    tubemp3_biz: getLinkTubemp3,
                                 }
                             }
-                            res.json({status: 200, creator: "@alvianto.17", result: getLinkDownloader})
+                            res.json({status: 200, creator: "@cakrayp_jhn", result: getLinkDownloader})
                         } else {
                             const { publishedAt, channelId, title, description, thumbnails, channelTitle, liveBroadcastContent } = data.items[0].snippet;
                             const { viewCount, likeCount, dislikeCount, favoriteCount, commentCount } = data.items[0].statistics
@@ -136,6 +139,7 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
                             } else {
                                 try { var getLinkTubemp3 = await tubemp3.getAudioWithTubeMp3(`https://youtu.be/${ytVideoId[1]}`) } catch (err) { var getLinkTubemp3 = err.message }
                                 getLinkDownloader = {
+                                    tubemp3_biz: getLinkTubemp3,
                                 }
                             }
                             res.json({
@@ -172,7 +176,7 @@ app.get('/youtube/downloader/:Mimetype', async (req, res) => {
             } else {
                 res.json({
                     status: 403,
-                    creator: "@alvianto.17",
+                    creator: "@alvianto,17",
                     message: "This is special for youtube URL"
                 })
             }
