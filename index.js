@@ -7,10 +7,7 @@ const port = process.env.PORT || 4040
 const google_key = process.env.GOOGLE_KEY || "AIzaSyBAtDdUTQK2EvtC4f6mFWU778zd_WmyxbA"
 
 // Library
-const {
-    y2mate,
-    tubemp3
-} = require('./utils/index')
+const {tubemp3} = require('./utils/index')
 
 app.set("json spaces", 4)
 
