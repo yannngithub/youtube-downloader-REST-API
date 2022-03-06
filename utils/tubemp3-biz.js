@@ -12,7 +12,7 @@ function getAudioWithTubeMp3(link) {
         }
         axios({
             method: "GET",
-            url: `https://ytmp4.buzz/api/button/mp3/${VideoID[1]}`,
+            url: `https://ytmp4.buzz/api/button/mp3/${VideoID[0]}`,
             headers: {
                 "Content-type": "text/html"
             }
