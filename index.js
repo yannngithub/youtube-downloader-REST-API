@@ -14,7 +14,7 @@ app.set("json spaces", 4)
 
 app.get('/', async (req, res) => {
     const link_gitub = "https://github.com/cakrayp/youtube-downloader-REST-API.git"
-    res.send(`<code><b>AUDIO:</b> https://yannnapi.herokuapp.com/youtube/downloader/audio?url=\n\n\n<b>VIDEO:</b> https://yannnapi.herokuapp.com/youtube/downloader/video?url=</code0`)
+    res.send(`<code><b>AUDIO:</b> https://yannnapi.herokuapp.com/youtube/downloader/audio?url=<br/><br/><br/><b>VIDEO:</b> https://yannnapi.herokuapp.com/youtube/downloader/video?url=</code0`)
 })
 
 app.get('/youtube/downloader/:Mimetype', async (req, res) => {
