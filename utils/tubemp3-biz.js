@@ -12,7 +12,7 @@ function getAudioWithTubeMp3(link) {
         }
         axios({
             method: "GET",
-            url: `https://tubemp3.biz/api/mp3/${VideoID[1]}`,
+            url: `https://api.vevioz.com/api/button/mp3/${VideoID[1]}`,
             headers: {
                 "Content-type": "text/html"
             }
